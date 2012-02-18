@@ -2,10 +2,9 @@
 <html>
   <head>
     <title>Adam's ROR Sample Application | <%= @title %></title>
-    <%= csrf_meta_tag %>
   </head>
   <body>
-    <%= yield %>
+    <h1>About Us</h1>
+    <p>This is the <%= @title %> page for the sample application.</p>
   </body>
 </html>
-
