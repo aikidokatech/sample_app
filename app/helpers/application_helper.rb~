@@ -2,7 +2,7 @@ module ApplicationHelper
 
   # Create a title helper
   def title
-    base_title = "Adam's ROR Sample Application"
+    base_title = "Adam's RoR Sample Application"
     if @title.nil?
       base_title
     else
