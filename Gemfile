@@ -9,6 +9,8 @@ gem 'rails', '3.2.1'
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
+# This annotate is necessarty to fix "undefinded method 'namespace'" error in databases.rake
+  gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 end
 
 group :test do
