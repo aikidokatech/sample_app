@@ -41,4 +41,5 @@ gem 'jquery-rails'
 group :production do
   # Heroku specific gems
   gem "pg"
+  gem 'faker'
 end
