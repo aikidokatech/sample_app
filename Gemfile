@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'will_paginate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,6 +13,7 @@ group :development do
   gem 'rspec-rails'
 # This annotate is necessarty to fix "undefinded method 'namespace'" error in databases.rake
   gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+  gem 'faker'
 end
 
 group :test do
