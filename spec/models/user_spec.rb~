@@ -210,7 +210,6 @@ describe User do
 
     end
 
-
   end
 
   describe "relationships" do
@@ -267,6 +266,18 @@ describe User do
     it "should include the follower in the followers array" do
       @user.follow!(@followed)
       @followed.followers.should include(@user)
+    end
+
+    it "should delete any followings when user removed" do
+      @user.follow!(@followed)
+      @user.destroy
+      @followed.followers.should_not include(@user)
+    end
+
+    it "should delete any followers when user removed" do
+      @followed.follow!(@user)
+      @user.destroy
+      @user.followers.should_not include(@user)
     end
 
   end

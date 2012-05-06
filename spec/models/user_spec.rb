@@ -268,6 +268,18 @@ describe User do
       @followed.followers.should include(@user)
     end
 
+    it "should delete any followings when user removed" do
+      @user.follow!(@followed)
+      @user.destroy
+      @followed.followers.should_not include(@user)
+    end
+
+    it "should delete any followers when user removed" do
+      @followed.follow!(@user)
+      @user.destroy
+      @followed.following.should_not include(@user)
+    end
+
   end
 
 end
